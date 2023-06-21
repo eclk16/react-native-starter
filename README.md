@@ -31,9 +31,9 @@ Bu projeyi çalıştırmak için aşağıdaki ortam değişkenlerini .env dosyan
 
 Proje içerisine dahil edilmiş react-native paketleri
 
-[Tailwind](https://github.com/jaredh159/tailwind-react-native-classnames)
+[twrnc](https://github.com/jaredh159/tailwind-react-native-classnames)
 
-[React Navigation](https://reactnavigation.org/)
+[react-native-dotenv](https://github.com/goatandsheep/react-native-dotenv)
 
 
 ## Yazarlar ve Teşekkür
