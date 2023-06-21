@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 import LoginScreen from "../screens/auth/login";
 import HomeScreen from "../screens/home";
 import { LangContext } from "./LanguageContext";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 const DataContext = createContext({});
 
 // @ts-ignore
@@ -49,15 +50,39 @@ const DataProvider = ({children}) => {
         authOptions: {
 
         },
-        tab: [
+        appMenu: [
             {
                 name:"Home",
-                title:"title.home",
-                header:false,
+                options:{
+                    headerShown: true,
+                    title:lang["title.home"],
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused, color, size }) =>
+                        <MaterialCommunityIcons
+                            name="map"
+                            size={size}
+                            color={color}
+                        />
+                },
+                component:HomeScreen
+            },
+            {
+                name:"De",
+                options:{
+                    headerShown: true,
+                    title:lang["title.home"],
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused, color, size }) =>
+                        <MaterialCommunityIcons
+                            name="map"
+                            size={size}
+                            color={color}
+                        />
+                },
                 component:HomeScreen
             }
         ],
-        tabOptions:{
+        appOptions:{
 
         },
         drawer: [
