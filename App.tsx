@@ -1,28 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { SafeAreaView, Text } from "react-native";
-import tw from 'twrnc';
-import {SUPABASE_URL} from '@env'
-import { getValue, setValue } from "./src/inc/asyncStorage";
-function App(): JSX.Element {
-  const [deneme,setDeneme] = useState('');
-  useEffect(() => {
-    //setValue('deneme','eclk16');
-    getValue('deneme').then(value => setDeneme(value));
-  },[]);
+import React from "react";
+import InıtApp from "./src/init";
+import { LangProvider } from "./src/contexts/LanguageContext";
+import { DataProvider } from "./src/contexts/DataContext";
+import { AuthProvider } from "./src/contexts/AuthContext";
+import { LoadingProvider } from "./src/contexts/LoadingContext";
+import { ThemeProvider } from "./src/contexts/ThemeContext";
 
-  return (
-    <SafeAreaView
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-      }}>
-
-      <Text style={tw`text-red-400`}>React Native Starter</Text>
-      <Text style={tw`text-red-400`}>{deneme}</Text>
-
-    </SafeAreaView>
-  );
+function App() {
+    return (
+        <LangProvider>
+            <ThemeProvider>
+                <LoadingProvider>
+                    <DataProvider>
+                        <AuthProvider>
+                            <InıtApp />
+                        </AuthProvider>
+                    </DataProvider>
+                </LoadingProvider>
+            </ThemeProvider>
+        </LangProvider>
+    );
 }
 
-export default App;
+function AppWrapper() {
+    return <App />;
+}
+
+export default AppWrapper;

@@ -38,6 +38,8 @@ Proje içerisine dahil edilmiş react-native paketleri
 
 [@react-native-async-storage/async-storage](https://react-native-async-storage.github.io/async-storage/)
 
+[React Navigation](https://reactnavigation.org/)
+
 
 
 ## Yazarlar ve Teşekkür
