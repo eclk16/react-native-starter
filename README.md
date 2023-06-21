@@ -13,6 +13,7 @@ react-native-start'i kullanmak için
   git clone https://github.com/eclk16/react-native-starter.git
   cd react-native-starter
   npm install
+  npx pod-install -ios
   npx react-native start --reset-cache
   npx react-native run-ios 
   npx react-native run-android
@@ -34,6 +35,9 @@ Proje içerisine dahil edilmiş react-native paketleri
 [twrnc](https://github.com/jaredh159/tailwind-react-native-classnames)
 
 [react-native-dotenv](https://github.com/goatandsheep/react-native-dotenv)
+
+[@react-native-async-storage/async-storage](https://react-native-async-storage.github.io/async-storage/)
+
 
 
 ## Yazarlar ve Teşekkür
